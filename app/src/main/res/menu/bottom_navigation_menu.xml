@@ -6,9 +6,9 @@
         android:icon="@drawable/ic_headline"
         android:title="@string/headlines_text" />
     <item
-        android:id="@+id/favorite_action"
+        android:id="@+id/favourites_action"
         android:icon="@drawable/ic_favorite"
-        android:title="@string/favorites_text" />
+        android:title="@string/favourites_text" />
     <item
         android:id="@+id/search_action"
         android:icon="@drawable/ic_search"

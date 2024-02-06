@@ -37,4 +37,5 @@ Some of the things I have learned to do while coding this app were:
 
 
 ## Valuable Resources  
- 
+
+Navigate to a destination: https://developer.android.com/guide/navigation/use-graph/navigate
