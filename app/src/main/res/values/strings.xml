@@ -3,4 +3,7 @@
     <string name="headlines_text">Headlines.</string>
     <string name="favourites_text">Favourites</string>
     <string name="search_text">Search</string>
+    <string name="headlines_section_title">Headlines.</string>
+    <string name="favourites_section_title">Favourites.</string>
+    <string name="search_section_title">Search.</string>
 </resources>

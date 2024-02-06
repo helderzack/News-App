@@ -32,6 +32,24 @@ Some of the things I have learned to do while coding this app were:
 
 ### Light Theme
 
+<p align="center">  
+<img src="design-preview/headlines-section-light-theme.png">  
+</p>  
+<p align="center">  
+<small><em>Headlines Section - Light Theme</em></small>  
+</p> 
+ <p align="center">  
+<img src="design-preview/favourites-section-light-theme.png">  
+</p>  
+<p align="center">  
+<small><em>Favourites Section - Light Theme</em></small>  
+</p> 
+ <p align="center">  
+<img src="design-preview/search-section-light-theme.png">  
+</p>  
+<p align="center">  
+<small><em>Search Section - Light Theme</em></small>  
+</p> 
 
 ### Dark Theme
 
