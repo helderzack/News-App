@@ -1,7 +1,12 @@
 package com.helder.newsapp
 
+import android.app.SearchManager
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
+import android.widget.SearchView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
@@ -20,6 +25,12 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        if(Intent.ACTION_SEARCH == intent.action) {
+            intent.getStringExtra(SearchManager.QUERY)?.also {query ->
+                doSearch(query)
+            }
+        }
+
         val navHostFragment =
             supportFragmentManager.findFragmentById(binding.fragmentContainerView.id)
                     as NavHostFragment
@@ -27,6 +38,20 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
 
         binding.bottomNavigationView.setOnItemSelectedListener(this)
         binding.bottomNavigationView.setOnItemReselectedListener(this)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
+        (menu?.findItem(R.id.search_bar)?.actionView as SearchView).apply {
+            setSearchableInfo(searchManager.getSearchableInfo(componentName))
+            isIconifiedByDefault = false
+        }
+
+        return true
+    }
+
+    private fun doSearch(query: String) {
+
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {

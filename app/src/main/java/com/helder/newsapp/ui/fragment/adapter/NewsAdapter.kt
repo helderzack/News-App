@@ -2,6 +2,7 @@ package com.helder.newsapp.ui.fragment.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.BaseAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.helder.newsapp.databinding.NewsItemBinding
 import com.helder.newsapp.model.News
