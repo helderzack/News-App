@@ -4,6 +4,7 @@ import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.SearchView
@@ -51,7 +52,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
     }
 
     private fun doSearch(query: String) {
-
+        Log.d("SEARCH_QUERY", query)
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
