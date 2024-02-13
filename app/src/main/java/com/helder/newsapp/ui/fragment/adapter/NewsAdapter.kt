@@ -2,13 +2,13 @@ package com.helder.newsapp.ui.fragment.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.BaseAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.helder.newsapp.databinding.NewsItemBinding
 import com.helder.newsapp.model.News
+import com.helder.newsapp.service.listener.OnCardClickListener
 import com.helder.newsapp.ui.fragment.viewholder.NewsViewHolder
 
-class NewsAdapter(private val newsList: List<News>): RecyclerView.Adapter<NewsViewHolder>() {
+class NewsAdapter(private val newsList: List<News>, private val listener: OnCardClickListener): RecyclerView.Adapter<NewsViewHolder>() {
 
     private lateinit var binding: NewsItemBinding
 
@@ -20,7 +20,7 @@ class NewsAdapter(private val newsList: List<News>): RecyclerView.Adapter<NewsVi
     override fun getItemCount(): Int = newsList.size
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
-        holder.bind(newsList[position])
+        holder.bind(newsList[position], listener)
     }
 
 }

@@ -6,12 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.helder.newsapp.databinding.FragmentHeadlinesBinding
+import com.helder.newsapp.service.listener.OnCardClickListener
 import com.helder.newsapp.ui.fragment.adapter.NewsAdapter
 import com.helder.newsapp.ui.fragment.viewmodel.HeadlinesViewModel
 
-class HeadlinesFragment: Fragment() {
+class HeadlinesFragment : Fragment() {
 
     private var _binding: FragmentHeadlinesBinding? = null
     private val binding get() = _binding!!
@@ -29,7 +31,12 @@ class HeadlinesFragment: Fragment() {
 
         val newsList = viewModel.getNews()
         binding.recyclerViewNews.layoutManager = LinearLayoutManager(requireContext())
-        binding.recyclerViewNews.adapter = NewsAdapter(newsList)
+        binding.recyclerViewNews.adapter = NewsAdapter(newsList, object : OnCardClickListener {
+            override fun onCardClick() {
+                val action = HeadlinesFragmentDirections.actionHeadlinesDestinationToArticleDestination()
+                findNavController().navigate(action)
+            }
+        })
 
         return binding.root
     }

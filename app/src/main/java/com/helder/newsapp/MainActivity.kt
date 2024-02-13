@@ -10,10 +10,12 @@ import android.view.MenuItem
 import android.widget.SearchView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.commit
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.google.android.material.navigation.NavigationBarView
 import com.helder.newsapp.databinding.ActivityMainBinding
+import com.helder.newsapp.ui.fragment.ArticleFragment
 
 class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListener,
     NavigationBarView.OnItemReselectedListener {
@@ -26,8 +28,8 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        if(Intent.ACTION_SEARCH == intent.action) {
-            intent.getStringExtra(SearchManager.QUERY)?.also {query ->
+        if (Intent.ACTION_SEARCH == intent.action) {
+            intent.getStringExtra(SearchManager.QUERY)?.also { query ->
                 doSearch(query)
             }
         }

@@ -8,15 +8,32 @@
         android:id="@+id/headlines_destination"
         android:name="com.helder.newsapp.ui.fragment.HeadlinesFragment"
         android:label="Headlines"
-        tools:layout="@layout/fragment_headlines" />
+        tools:layout="@layout/fragment_headlines" >
+        <action
+            android:id="@+id/action_headlines_destination_to_article_destination"
+            app:destination="@id/article_destination" />
+    </fragment>
     <fragment
         android:id="@+id/favourites_destination"
         android:name="com.helder.newsapp.ui.fragment.FavouritesFragment"
         android:label="Favourites"
-        tools:layout="@layout/fragment_favourites" />
+        tools:layout="@layout/fragment_favourites" >
+<!--        <action-->
+<!--            android:id="@+id/action_favourites_destination_to_article_destination"-->
+<!--            app:destination="@id/article_destination" />-->
+    </fragment>
     <fragment
         android:id="@+id/search_destination"
         android:name="com.helder.newsapp.ui.fragment.SearchFragment"
         android:label="Search"
-        tools:layout="@layout/fragment_search" />
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_search_destination_to_article_destination"
+            app:destination="@id/article_destination" />
+    </fragment>
+    <fragment
+        android:id="@+id/article_destination"
+        android:name="com.helder.newsapp.ui.fragment.ArticleFragment"
+        android:label="Article"
+        tools:layout="@layout/fragment_article" />
 </navigation>
