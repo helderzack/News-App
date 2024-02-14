@@ -10,12 +10,10 @@ import android.view.MenuItem
 import android.widget.SearchView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.commit
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.google.android.material.navigation.NavigationBarView
 import com.helder.newsapp.databinding.ActivityMainBinding
-import com.helder.newsapp.ui.fragment.ArticleFragment
 
 class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListener,
     NavigationBarView.OnItemReselectedListener {
@@ -60,17 +58,14 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.headlines_action -> {
-                binding.textSectionTitle.text = getString(R.string.headlines_section_title)
                 navController.navigate(R.id.headlines_destination)
             }
 
             R.id.favourites_action -> {
-                binding.textSectionTitle.text = getString(R.string.favourites_section_title)
                 navController.navigate(R.id.favourites_destination)
             }
 
             R.id.search_action -> {
-                binding.textSectionTitle.text = getString(R.string.search_section_title)
                 navController.navigate(R.id.search_destination)
             }
         }

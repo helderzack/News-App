@@ -1,4 +1,5 @@
 
+
 # News App
 
 Description
@@ -27,6 +28,7 @@ Users should be able to:
 
 Some of the things I have learned to do while coding this app were:
 - How to implement a BottomNavigationView
+- Hot to add a Web View to the app
 
 ## Design Preview
 
@@ -37,23 +39,31 @@ Some of the things I have learned to do while coding this app were:
 </p>  
 <p align="center">  
 <small><em>Headlines Section - Light Theme</em></small>  
-</p> 
- <p align="center">  
+</p>  
+<p align="center">  
 <img src="design-preview/favourites-section-light-theme.png">  
 </p>  
 <p align="center">  
 <small><em>Favourites Section - Light Theme</em></small>  
-</p> 
- <p align="center">  
+</p>  
+<p align="center">  
 <img src="design-preview/search-section-light-theme.png">  
 </p>  
 <p align="center">  
 <small><em>Search Section - Light Theme</em></small>  
-</p> 
+</p>  
+<p align="center">  
+<img src="design-preview/article-web-view-light-theme.png">  
+</p>  
+<p align="center">  
+<small><em>Web View - Light Theme</em></small>  
+</p>  
 
 ### Dark Theme
 
 
-## Valuable Resources  
+## Valuable Resources
 
 Navigate to a destination: https://developer.android.com/guide/navigation/use-graph/navigate
+
+Build web apps in WebView: https://developer.android.com/develop/ui/views/layout/webapps/webview
